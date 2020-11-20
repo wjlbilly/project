@@ -1,0 +1,40 @@
+.clearfix{
+    *zoom: 1;
+}
+.clearfix:after{
+    content: ' ';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+
+}/*清除浮动带来的影响*/
+body,html,ul,ol,h1,h2,h3,h4,h5,h6,dl,dd,select,fieldset,legend,input,dt,textarea,img,th,td,p{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    font: 14px "Microsoft YaHei" ,Arial;
+}
+ul,ol,li {
+   list-style: none;
+   
+}
+a,u{
+    color: #444;
+   text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6,b,strong{
+    font-weight:normal ;
+    font-size: 100%;
+}
+i,em{
+   font-style: normal;
+}
+input{
+   outline: none;
+} 
+img{
+   vertical-align: middle;
+}
