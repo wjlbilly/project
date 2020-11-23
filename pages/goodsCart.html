@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车页面</title>
+     <link rel="stylesheet" href="../css/reset.css">
+   <link rel="stylesheet" href="../css/iconfont.css">
+ <link rel="stylesheet" href="../css/goodsCart.css">
+</head>
+<body>
+
+    <div id="add">
+        <div class="wrap">
+            <div class="header">
+            <div class="site cont">
+             <div class="container">
+                 <div class="cont_left"> 
+                    <a href="#">小米商城</a><span class="sep">|</span>
+                    <a href="#">mIUI</a><span class="sep">|</span>
+                    <a href="#">loT</a><span class="sep">|</span>
+                    <a href="#">云服务</a><span class="sep">|</span>
+                    <a href="#">金融</a><span class="sep">|</span>
+                    <a href="#">有品</a><span class="sep">|</span>
+                    <a href="#">小爱开放平台</a><span class="sep">|</span>
+                    <a href="#">企业团购</a><span class="sep">|</span>
+                    <a href="#">资质正照</a><span class="sep">|</span>
+                    <a href="#">协议规则</a><span class="sep">|</span>
+                    <a href="#">下载app</a><span class="sep">|</span>
+                    <a href="#">只能生活</a><span class="sep">|</span>
+                    <a href="#">Select Location</a><span class="sep">|</span>
+                 </div>
+         
+                 <div class="cont_right">
+                     <a rel="nofollow" id="J_miniCartBtn" href="//www.mi.com/buy/cart" class="cart" data-stat-id="c92dff804b8a00f0">
+                          <i class="iconfont icon-gouwuchekong"></i>
+                         <em class="iconfont-cart"></em>
+                         <em class="iconfont-cart-full hide"></em>购物车
+                         <span class="cart-mini-num J_cartNum  cart">（0）</span>
+                 </a>
+                 </div>
+                 <div class="cont_middle">
+                     <a href="login.html"  >登录</a><span class="sep">|</span>
+                     <a href="register.html">注册</a><span class="sep">|</span>
+                     <a href="#">消息下载</a><span class="sep">|</span>
+                 </div>
+             </div>
+            </div>
+            </div>
+         </div> 
+         <div class="wrapp">
+            <div class="head">
+             <span> <i class="iconfont icon-xiaomi"></i> </span>
+                <h3>我的购物车</h3>
+              <em><a href="#">登录</a>|<a href="#">注册</a></em>
+              <p><a href="./goodsList.html">我的购物列表</a></p>
+            </div>
+            <div class="main">
+                <div class="title">
+                    <span class="all"><input type="checkbox" class="al"><em>全选</em></span>
+                    <span class="shopping">商品</span>
+                    <span class="price">单价</span>
+                    <span class="num">数量</span>
+                    <span class="sum">小计</span>
+                    <span class="remove">操作</span>
+                    </div>
+               <ul class="list">
+                  <!-- <li>
+                    <input type="checkbox">
+                    <img src="./images/box1.webp" alt="">
+                    <h3>腾讯黑鲨游戏手机3S,骁龙865处理器，120Hz刷新率</h3>
+                    <p>￥188</p>
+                    <div ><em>-</em><a href="#" >7</a><span>+</span></div>
+                    <i>￥188</i>
+                    <h4>x</h4>
+                  </li>
+                  <li>
+                    <input type="checkbox">
+                    <img src="./images/box1.webp" alt="">
+                    <h3>腾讯黑鲨游戏手机3S,骁龙865处理器，120Hz刷新率</h3>
+                    <p>￥188</p>
+                     <div ><em>-</em><a href="#" >5</a><span>+</span></div>
+                    <i>￥188</i>
+                    <h4>x</h4>
+                  </li>
+                  <li>
+                    <input type="checkbox">
+                    <img src="./images/box1.webp" alt="">
+                    <h3>腾讯黑鲨游戏手机3S,骁龙865处理器，120Hz刷新率</h3>
+                    <p>￥188</p>
+                       <div ><em>-</em><a href="#" >8</a><span>+</span></div>
+                    <i>￥188</i>
+                    <h4>x</h4>
+                  </li>
+                  <li>
+                    <input type="checkbox">
+                    <img src="./images/box1.webp" alt="">
+                    <h3>腾讯黑鲨游戏手机3S,骁龙865处理器，120Hz刷新率</h3>
+                    <p>￥188</p>
+                    <div><em>-</em><a href="#">2</a><span>+</span></div>
+                    <i>￥188</i>
+                    <h4 >x</h4>
+                  </li>   -->
+              </ul> 
+              <div id="tot">
+             <span>继续购物</span>
+                 <p>共  <u>0</u> 件商品</p>
+                 <h3>也选择<u>0</u> 件</h3>
+                 <em>合计：</em>
+                 <i>  <u>0</u> 元</i>
+                 <h2>去结算</h2> 
+           </div>  
+         
+             </div>
+             
+        </div>
+        
+        
+    
+        <div class="footer">
+            <div class="site-footer">
+            <div class="wraper container ">
+               <div class="service">
+                   <ul>
+                       <li  class="xian">
+                           <a href="#"><em class="iconfont icon-shezhi"></em><span>预约维修服务</span></a>
+                       </li>
+                       <li class="xian">
+                           <a href="#"><em class="iconfont icon-7tiantuihuanhuo"></em><span>七天无理由退换</span></a>
+                       </li>
+                       <li class="xian">
+                           <a href="#"><em class="iconfont icon-15tianwuliyoutuihuo"></em><span>15天免费换货</span></a>
+                       </li>
+                       <li class="xian">
+                           <a href="#"><em class="iconfont icon-liwu"></em><span>满99元包邮</span></a>
+                       </li>
+                       <li >
+                           <a href="#"><em class="iconfont icon-dingwei"></em><span>520余家售后网点</span></a>
+                       </li>
+                   </ul>
+               </div>
+               <div class="link">
+                   <div class="link-left">
+                       <dl class="col-links col-links-first">
+                           <dt>帮助中心</dt>
+                           <dd><a href="#" target="_blank">账户管理</a></dd>
+                           <dd><a  href="#" target="_blank">购物指南</a></dd>
+                           <dd><a href="#" target="_blank">订单操作</a></dd>
+                       </dl>
+                       <dl class="col-links ">
+                           <dt>服务支持</dt>
+                           <dd><a  href="#" target="_blank">售后政策</a></dd>
+                           <dd><a  href="#" target="_blank">自助服务</a></dd>
+                           <dd><a  href="#" target="_blank">相关下载</a></dd>
+                       </dl>
+                       <dl class="col-links ">
+                           <dt>线下门店</dt>
+                           <dd><a  href="#" target="_blank">小米之家</a></dd>
+                           <dd><a  href="#" target="_blank">服务网点</a></dd>
+                           <dd><a  href="#" target="_blank">授权体验店</a></dd>
+                       </dl>
+                       <dl class="col-links ">
+                           <dt>线下门店</dt>
+                           <dd><a  href="# "target="_blank">小米之家</a></dd>
+                           <dd><a  href="#" target="_blank">服务网点</a></dd>
+                           <dd><a  href="#" target="_blank">授权体验店</a></dd>
+                       </dl>
+           
+                <dl class="col-links ">
+                   <dt>关注我们</dt>
+                   <dd><a href="#" target="_blank">新浪微博</a></dd>
+                   <dd><a  href="#"  target="_blank">官方微信</a></dd>
+                   <dd><a href="#" target="_blank">联系我们</a></dd>
+                   <dd><a  href="#" target="_blank">公益基金会</a></dd>
+               </dl>
+               
+               <dl class="col-links ">
+                   <dt>特色服务</dt>
+                   <dd><a  href="#" target="_blank">F 码通道</a></dd>
+                   <dd><a  href="#" target="_blank">礼物码</a></dd>
+                   <dd><a  href="#" target="_blank">防伪查询</a></dd>
+               </dl>
+                   </div>
+                   <div class="link-right">
+                       <div class="position">
+                       <p>400-100-5678</p> 
+                       <span>8:00-18:00（仅收市话费）</span> 
+                       <div class="box"><a ><em class="iconfont  icon-xinxi"></em> 人工客服 </a></div>
+                       <div class="ww">关注小米：
+                       <a  class="wb iconfont icon-tubiaozhizuo- "  href="#" target="_blank" ></a>
+                       <a class="wx iconfont  icon-weixin" href="#" target="_blank"   ></a> 
+                       </div>
+                       <img src="../img/download.png" alt="">
+                   </div>
+                   </div>
+               </div>
+            </div>
+           
+            </div>
+            <div class="site-info">
+                <div class="info">
+                   <div class="logo  "> <i class="iconfont icon-xiaomi"></i> </div>
+                   <div class="info-text">
+                       <p class="sites">
+                           <a rel="nofollow" href="" target="_blank">小米商城</a>
+                           <span class="sep">|</span>
+                           <a rel="nofollow" href="" target="_blank">MIUI</a>
+                           <span class="sep">|</span>
+                           <a rel="nofollow" href="" target="_blank">米家</a>
+                           <span class="sep">|</span>
+                           <a rel="nofollow" href="" target="_blank">米聊</a>
+                           <span class="sep">|</span>
+                           <a rel="nofollow" href="" target="_blank">多看</a>
+                           <span class="sep">|</span>
+                           <a rel="nofollow" href="" target="_blank">游戏</a>
+                           <span class="sep">|</span>
+                           <a rel="nofollow" href="" target="_blank">政企服务</a>
+                           <span class="sep">|</span>
+                           <a rel="nofollow" href="" target="_blank">小米天猫店</a>
+                           <span class="sep">|</span>
+                           <a rel="nofollow" href="" target="_blank">小米集团隐私政策</a>
+                           <span class="sep">|</span>
+                           <a rel="nofollow" href="" target="_blank">小米公司儿童信息保护规则</a>
+                           <span class="sep">|</span>
+                           <a rel="nofollow" href="" target="_blank">小米商城隐私政策</a>
+                           <span class="sep">|</span>
+                           <a rel="nofollow" href="" target="_blank">小米商城用户协议</a>
+                           <span class="sep">|</span>
+                           <a rel="nofollow" href="" target="_blank">问题反馈</a>
+                           <span class="sep">|</span>
+                           <a rel="nofollow" href="" class="">Select Location</a>
+                       </p>
+                       <p>
+                           &copy;
+                           <a href="#" target="_blank" >mi.com</a> 京ICP证110507号
+                           <a href="##" target="_blank" >京ICP备10046444号</a>
+                           <a rel="nofollow" href="" target="_blank">京公网安备11010802020134号</a>
+                           <a href="" target="_blank">京网文[2020]0276-042号</a>
+                           <br>
+                           <a href="#" target="_blank">（京）网械平台备字（2018）第00005号</a>
+                           <a href="#" target="_blank">互联网药品信息服务资格证 (京)-非经营性-2014-0090</a>
+                           <a href="#" target="_blank">营业执照</a>
+                           <a href="#" target="_blank">医疗器械质量公告</a>
+                           <br>
+                           <a href="" target="_blank">增值电信业务许可证</a>&nbsp;网络食品经营备案 京食药网食备202010048 &nbsp;
+                           <a href="" target="_blank">食品经营许可证</a>
+                           <br>
+                           违法和不良信息举报电话：171-5104-4404&nbsp;<a href='' target="_blank">知识产权侵权投诉</a>&nbsp;本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+                       </p>
+                   </div>
+                   <div class="info-links">
+                       <a rel="nofollow" href="#" target="_blank">
+                           <img rel="nofollow" src="../img/link1.png" width="83px" height="28px" alt="TRUSTe Privacy Certification" />
+                       </a>
+                       <a rel="nofollow" href="#" target="_blank">
+                           <img rel="nofollow" src="../img/link7.png" alt="诚信网站" />
+                       </a>
+                       <a rel="nofollow" href="#" target="_blank">
+                           <img rel="nofollow" src="../img/link3.png" alt="可信网站" />
+                       </a>
+                       <a rel="nofollow" href="#" target="_blank">
+                           <img rel="nofollow" src="../img/link2.png" alt="诚信经营 放心消费" />
+                       </a>
+                       <a rel="nofollow" href="#" target="_blank" style="position: relative; ">
+                           <img rel="nofollow" src="../img/link4.png" alt="诚信经营 放心消费" />
+                           <img class="show" rel="nofollow" src="../img/link5.png" alt="诚信经营 放心消费" style="display: none; position: absolute; left: 0; top: -14px;" />
+                       </a>
+                       </a>
+                   </div>
+                </div>
+                <div class="slo">让全球每个人都能享受科技带来的美好生活</div>
+            </div>
+        </div>
+        <div class="fix">
+        <ul>
+            <li> <a href="#"><img src="../img/1.png" alt=""></a></li>
+            <li> <a href="#"><img src="../img/2.png" alt=""></a></li>
+            <li><a href="#"><img src="../img/3.png" alt=""></a> </li>
+            <li> <a href="#"><img src="../img/4.png" alt=""></a></li>
+            <li> <a href="#"><img src="../img/5.png" alt=""></a></li>
+            <li class="lis" > <a href="#" ><img src="../img/6.png" alt=""></a></li>
+        </ul>
+        </div>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/goodsCart.js"></script>
+<script src="../js/goodstotal.js"></script>     
+</body>
+</html>

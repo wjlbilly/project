@@ -1,14 +1,14 @@
 
 [
-	{"title":"小米10 至尊纪念版,120X 变焦/120W秒充/120Hz屏幕","imgurl":"../","price":"5299","code":"abc1"},
-	{"title":"Redmi K30S 至尊纪念版","imgurl":"../img/right2.jpg","price":"2599元起"},
-	{"title":"Redmi k30 至尊版","imgurl":"../img/right3.jpg","price":"1999元起"},
-	{"title":"腾讯黑鲨3s","imgurl":"../img/right4.jpg","price":"3999元起"},
-	{"title":"Remdi 9A","imgurl":"../img/right5.jpg","price":"599元起"},
-    {"title":"小米10","imgurl":"../img/right6.jpg","price":"1999元起"},
-	{"title":"小Remdi K30 至尊纪念版","imgurl":"../img/right7.jpg","price":"3799元起"},
-	{"title":"Remdi K30 Pro","imgurl":"../img/right8.jpg","price":"3199元起"},
-	{"title":"小Remdi K30 至尊纪念版","imgurl":"../img/right7.jpg","price":"3799元起"},
-	{"title":"Remdi K30 Pro","imgurl":"../img/right8.jpg","price":"3199元起"}
+	{"title":"小米10 至尊纪念版,120X 变焦/120W秒充/120Hz屏幕","imgurl":"../img/right1.jpg","price":"5299","code":"1"},
+	{"title":"Redmi K30S 至尊纪念版","imgurl":"../img/right2.jpg","price":"2599","code":"2"},
+	{"title":"Redmi k30 至尊版","imgurl":"../img/right3.jpg","price":"1999","code":"3"},
+	{"title":"腾讯黑鲨3s","imgurl":"../img/right4.jpg","price":"3999","code":"4"},
+	{"title":"Remdi 9A","imgurl":"../img/right5.jpg","price":"599","code":"5"},
+    {"title":"小米10","imgurl":"../img/right6.jpg","price":"1999","code":"6"},
+	{"title":"小Remdi K30 至尊纪念版","imgurl":"../img/right7.jpg","price":"3799","code":"7"},
+	{"title":"Remdi K30 Pro","imgurl":"../img/right8.jpg","price":"3199","code":"8"},
+	{"title":"小Remdi K30 至尊纪念版,120Hz弹出全面屏，天玑1000+旗舰处理器","imgurl":"../img/right9.jpg","price":"1399","code":"9"},
+	{"title":"Remdi K30 Pro 双模5G，骁龙865，弹出全面屏","imgurl":"../img/right10.jpg","price":"999","code":"10"}
 ]
 
