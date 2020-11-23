@@ -14,15 +14,23 @@ task('img', async ()=>{
   .pipe(dest('./dist/img'))
   .pipe(load.connect.reload())
 })
+
+// 处理font
 task('font', async ()=>{
   src('./font/*.*')
   .pipe(dest('./dist/font'))
   .pipe(load.connect.reload())
 })
 
+//处理json数据
+task('json', async ()=>{
+  src('./data/*.json')
+  .pipe(dest('./dist/data'))
+  .pipe(load.connect.reload())
+})
 
 
-// 处理font
+
 
 // 处理JS
 task('script', async ()=>{
@@ -64,4 +72,4 @@ task('connect', async ()=>{
   })
 })
 
-task('dev', series('delDist','img','html','script','sass','font','connect','watch'))
+task('dev', series('delDist','img','html','script','sass','font','json','connect','watch'))
