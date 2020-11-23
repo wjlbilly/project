@@ -24,7 +24,7 @@ $('.nav-list li').mouseenter(function(){
     $('.show').css("display",'block')
    })
     
-})
+});
 
 $('.nav-list li').mouseleave(function(){
     $('.show').css('display',"none")
@@ -33,7 +33,7 @@ $('.nav-list li').mouseleave(function(){
         $('.show').slideUp('slow')
     })
       
-  })
+  });
 
 
   //轮播左侧的列表
@@ -52,31 +52,66 @@ $('.nav-list li').mouseleave(function(){
         $('.menu-list').css('display',"none")
     })
       
-  })
+  });
 
+  //box-right json 数据渲染
+  $.ajax({
+    url:'../data/box-right.json',
+    type:"get",
+    dataType:"json",
+    success:function(data){
+      var showData='';
+      console.log(data);
+      $.each(data,function(index,ele){
+          showData+=` <li>
+                 <div > 
+                <a href="#"><img src="${ele.imgurl}" alt=""> 
+                  <h3>${ele.h3}</h3>
+                  <span>${ele.span}</span>
+                  <p>${ele.p}</p>
+             </div>
+           </li>`
+      }) 
+      $('.box-right ul').html(showData);
+    },
+    error:function(data){
+      console.log(data);
+    }
+});
+
+
+//select  切换
+$('.table-list ul li').on("click",function(){
+   var index = $(this).index()
+   $('.row-right #select').eq(index).css("display","block").siblings(" .row-right #select").css("display","none")
+})
+ 
   // 运动
-$('.left').click(function(){
-    var page =1;
-    var i=4;
-    var ant = $('#oul');
-    var len= $('#oul').find('li').length
-    var page_count = Math.ceil(len/i); 
+// $('.left').click(function(){
+//     var page =1;
+//     var i=4;
+//     var ant = $('#oul');
+//     var len= $('#oul').find('li').length;//18 长度
+//    var wid = ant.offsetLeft();
+//       console.log(wid);
+//     ant.animate({'left':'248*4'},1000)
 
-  if( page=page_count){
-    ant.animate({'left':'248'},1000)
+//   if( page=page_count){
+//     ant.animate({'left':'248'},1000)
 
-  }else{
-    ant.animate({'left':'248*page_count'},1000)
-    page--
-  }
+//   }else{
+//     ant.animate({'left':'248*4'},1000)
+//     page--
+//   }
 
 
   
-})
-$('.right').click(function(){
-    $('.animate').animate({'right':'248'},1000)
+// });
+
+// $('.right').click(function(){
+//     $('.animate').animate({'right':'248*2'},1000)
  
- })
+//  })
 
 
   

@@ -1,4 +1,4 @@
-$w:1349px;
+ $w:1349px;
 $auto:1226px;
 .container{
   width:$auto;
@@ -643,109 +643,440 @@ $auto:1226px;
     }
   }
    } 
-
+   
   }
+  .banner img{
+    width: 1226px;
+    height: 120px;
+    margin: 22px 0;
+     }
+     .shouji{
+      position: relative;
+      height: 58px;
+      width: 1226px;
+      h3{
+        margin: 0;
+        font-size: 22px;
+        font-weight: 200;
+        line-height: 58px;
+        color: #333
+    }
+    .more {
+      position: absolute;
+      right: 0;
+      top: 29px;
+      a{
+        display: block;
+        font-size: 16px;
+        color: #424242;
+        &:hover{
+          color: #ff6700;
+        }
+        i{
+          font-size: 18px;
+          padding-left: 5px;
+      }
+    }
+     }
+   }
+   .box-list{
+    position: relative;
+    width: 1226px;
+    height: 628px;
+    .box-left img{
+      width: 234px;
+      height: 614px;
+      margin-bottom: 14px;
+      &:hover{
+          box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+      }
+     }
+     .box-right{
+      position: absolute;
+      top: -14px;
+      left: 234px;
+      width: 992px;
+      height: 614px;
+      margin-bottom: 14px;
+      ul{
+        float: left;
+        li{
+          background-color: white;
+          text-align: center;
+          margin-left: 14px;
+           padding: 20px 0;
+          width: 234px;
+          height: 260px;
+          float: left;
+          margin-top:14px ;
+          &:hover{
+            box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+          }
+          p{
+            color: #ff6700;
+            margin:  0 10px;
+            margin-top: 10px;
+           }
+           span{
+            color: #ccc;
+            font-size: 12px;
+            margin: 0 10px;
+           }
+           img{
+             width: 160px;
+             height: 160px;
+            margin-top: -10px;
+        }
+      }
+    }
+     }
+   }
+   
+   .jiadian{
+    height: 58px;
+    h3{
+      float: left;
+      margin: 0;
+      font-size: 22px;
+      font-weight: 200;
+      line-height: 58px;
+      color: #333;
+  }
+  .table-list ul{
+    float: right;
+    li{
+      font-size: 16px;
+      line-height:58px ;
+    color: #424242;
+    float: left;
+    &:hover{
+      color: #ff6700;
+    }
+  }
+  .li1{
+    margin: 0 30px;
+  }
+   } 
+ }
+ .row li:hover{
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+ }
+ .row{
+  width: 1226px;
+  height: 628px;
+  .row-left{
+    float: left;
+    width: 234px;
+    height: 628px;
+    ul li{
+      margin-bottom: 14px;
+      img{
+        width: 234px;
+        height: 300px;
+      }
+  }
+ }
+ .row-right{
+  width:992px ;
+  float: right;
+  overflow: hidden;
+  .show{
+    display: none;
+   }
 
+  ul{
+    float: left;
+    li {
+      text-align: center;
+      margin-left: 14px;
+      background: white;
+      float: left;
+      width: 234px;
+      height: 260px;
+      float: left;
+      padding: 20px 0;
+      margin-bottom: 14px;
+      img{
+        margin-top: -10px;
+        width: 160px;
+        height: 160px;
+    }
+    h3{
+      margin-top: -10px;
+      margin-bottom: 3px;
+  }
+  del{
+    margin-left: 5px;
+} 
+p{
+  color: #ff6700;
+  margin:  0 10px;
+  margin-top: 10px;
+}
+span{
+  color: #ccc;
+  font-size: 12px;
+  margin: 0 10px;
+
+}
+  }
+  .lio{
+    position: relative;
+    background: rgb(245, 245, 245);
+    width: 234px;
+    margin: 0 ;
+    margin-left: 14px;
+    padding: 0;
+    height: 300px;
+    .top{
+      margin-left: 14px;
+      margin: 0;
+      margin-bottom: 14px;
+      padding: 0;
+      width: 234px;
+      height: 143px;
+      background:white;
+      img{
+        position: absolute;
+       top: 50px;
+       right: 0px;
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+      }
+      .t{
+        text-align: left;
+        width: 94px;
+        height: 66px;
+       position: absolute;
+       left: 40px;
+       margin-top: 50px;
+    }
+    }
+    .bt{
+      position: relative;
+      margin-left: 14px;
+      margin: 0;
+      padding: 0;
+      width: 234px;
+      height: 143px;
+    background: white;
+    .b{
+      position: absolute;
+      left: 40px;
+      margin-top: 50px;
+   }
+   h4{
+    display: block;
+    font-size: 18px;
+    color: #333;
+}
+h5{
+  margin-top: 5px;
+  display: block;
+  font-size: 12px;
+  color: #757575;
+ 
+ }
+ a i{
+  display: block;
+  color: #ff6700;
+  margin-left: 100px;
+  margin-top:40px ;
+  font-size: 40px;
+}
+  }
   }
 }
+ }
+ }
+ .view{
+  width: 1226px;
+  height: 299px;
+  ul{
+    float: left;
+    .video{
+      margin-left: 14px;
+  }
+  li{
+    position: relative;
+    width: 296px;
+    height: 285px;
+    margin-bottom: 14px;
+    background: white;
+    float: left;
+    &:hover{
+      box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+    }
+    h3{
+      margin: 0 14px 6px;
+      margin-top:30px ;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+      color: #333;
+  }
+  a  i{
+    color: white;
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    font-size: 30px;
+    &:hover{
+      color:  #ff6700;
+    }
+  }
+ 
+  p{
+    height: 18px;
+    text-align: center;
+    margin: 0 14px;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+}
+}
+}
+}
+ }
 
-
-
-// // 变量 $+变量名
-// $w:400px;
-// $h:200px;
-// $c:red;
-// $len:50%*10; // 500%
-// /* 标题样式 */
-// h1{
-//   width: $w;
-//   height: $h;
-//   color: $c;
-//   background-color: #ccc;
-// }
-
-// // sass中的注释有两种
-// // 1. // sass有的注释，不会被编译到css文件中
-// // /* xxx */ 会被编译到css文件中
-
-// // 嵌套语法
-// .box{
-//   width: $w;
-//   background-color: lightblue;
-//   h2{
-//     font-size: 30px;
-//     color: blue;
-//   }
-//   .show{
-//     width: 300px;
-//     height: 100px;
-//     span{
-//       color: red;
-//     }
-//     p{
-//       color: yellow;
-//     }
-//   }
-// }
-
-// // & 指向父选择器
-// a{
-//   color: blue;
-//   &:hover{
-//     color: red;
-//   }
-// }
-// .content{
-//   width: 500px;
-//   &-title{
-//     color: red;
-//   }
-//   &-main{
-//     color: blue;
-//   }
-// }
-
-// // @import 引入外部样式
-// @import 'header.scss';
-
-// // @mixin 混合器
-// @mixin nostyle {
-//   list-style: none;
-//   li{
-//     padding: 0;
-//     color: blue;
-//   }
-// }
-// .list{
-//   width: 500px;
-//   @include nostyle;
-// }
-
-// // 混合器传参
-// @mixin common($w,$h,$c) {
-//   width: $w;
-//   height: $h;
-//   color: $c;
-// }
-// .box1{
-//   background-color: #ccc;
-//   @include common(500px,200px,red);
-// }
-// .box2{
-//   padding: 10px;
-//   @include common(300px,100px,blue);
-// }
-
-// // 继承
-// .box3{
-//   padding: 20px;
-//   margin: 10px;
-//   font-size: 20px;
-// }
-// .box4{
-//   width: 500px;
-//   background: pink;
-//   @extend .box3;
-// }
+ .footer{
+  width: 100%;
+  height: 580px;
+  .site-footer{
+    height: 332px;
+   background: white;
+   .wraper{
+    height: 332px;
+    .service{
+      border-bottom: 1px solid #e0e0e0;
+      height: 79px;
+      ul{
+        float: left;
+        li{
+          position: relative;
+      
+          font-size: 16px;
+          text-align: center;
+          color: #616161;
+          width: 245.2px;
+          line-height: 80px;
+          float: left;
+          a em{
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        &:hover a{
+          color:  #ff6700;
+         }
+      }
+      .xian:before{
+        width: 1px;
+        height: 25px;
+        position: absolute;
+        right: 5px;
+        top: 25px;
+        content: "";
+        background: #e0e0e0;
+    }
+    }
+  }
+  .link{
+    height: 252px;
+    .link-left{
+      float: left;
+      width: 974px;
+      height: 172px;
+      padding: 40px 0;
+      dl{
+        width: 160px;
+        height: 116px;
+        float: left;
+        dt{
+          margin: -1px 0 26px;
+          font-size: 14px;
+          color: #424242;
+       
+      }
+      dd{
+        margin: 10px 0 0;
+        font-size: 12px;
+    }
+    }
+  }
+  .link-right{
+    float: right;
+    width: 252px;
+    height: 172px;
+    padding: 40px 0;
+    .position{
+      position: relative;
+      border-left: 1px solid #e0e0e0;
+      width: 251px;
+      height: 111px; 
+      p{
+        margin-left: 50px;
+        font-size: 22px;
+        color: #ff6700;
+    }
+    span{
+      margin-left: 50px;
+       font-size: 12px;
+   }
+   .box{
+    margin-left: 53px;
+    margin-top: 5px;
+   text-align: center;
+   line-height: 28px;
+    width: 118px;
+    height: 28px;
+    border: 1px solid #ff6700;
+    a{
+      color: #ff6700 ;
+  }
+  
+}
+.ww{
+  margin-left: 50px;
+  margin-top: 8px;
+  .wb{
+    font-size: 20px;
+    margin: 0 3px;
+    &:hover{
+      color:#ff6700 ;
+  
+  }
+}
+.wx{
+  font-size: 20px;
+  margin: 0 3px;
+  &:hover{
+    color:#ff6700 ;
+}
+&:hover img{
+  display: block;
+}
+}
+}
+img{
+  display: none;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+   right: 50px;
+  top: 120px;
+}
+  }
+} 
+  }
+  }
+}
+.site-info{
+  background: #fafafa;
+  padding: 40px 0;
+  height: 172px;
+}
+}
 
 

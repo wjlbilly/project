@@ -61,6 +61,7 @@ task('watch', async ()=>{
   watch('./sass/*.scss',series('sass'))
   watch('./img/*.*',series('img'))
   watch('./js/*.js',series('script'))
+  watch('./data/*.json',series('json'))
 })
 
 // 自动刷新服务
