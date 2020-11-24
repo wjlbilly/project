@@ -123,6 +123,5 @@ $(function(){
         var nodata = '<li class="no">购物车暂无数据！</li>'
         $('.list').html(nodata)
       }
-      
      
 })

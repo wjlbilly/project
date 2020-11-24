@@ -25,6 +25,8 @@ $(function(){
             return tot;
           }
           $('#tot p u').text(sum());
+          localStorage.setItem('tot',JSON.stringify(sum()))// 存储购物车得数量
+
           
           var _this = this;
   //单个勾选任务
@@ -68,9 +70,9 @@ this.$al.click(function(){
     if($(this).prop('checked')){
         $('.list input').each(function(index,item){;
             total +=Number($(item).siblings('i').text().split('￥').slice(1));
-                _this.$iu.text(total); 
             speed+= Number($(item).siblings('div').find('a').text())
                 _this.$h3u.text(speed);
+                 _this.$iu.text(total); 
             });
     }else{
         _this.$iu.text(0);
@@ -89,6 +91,7 @@ this.$al.click(function(){
         //     num=1;
         // }
         $('#tot p u').text(sum());
+        localStorage.setItem('tot',JSON.stringify(sum()))
      $(this).siblings('a').text(num);
      var countPrice =num*price;
      $(this).parent().siblings('i').text('￥'+countPrice);
@@ -116,6 +119,7 @@ this.$al.click(function(){
     var num = $(this).siblings('a').text();
     var price = $(this).parent().siblings('p').attr("price");
     $('#tot p u').text(sum());
+    localStorage.setItem('tot',JSON.stringify(sum()))
     // num++;
  $(this).siblings('a').text(num);
  var countPrice =num*price;
@@ -141,6 +145,7 @@ $('.list').on('click','li h4',function (){
     var  inPut = $(this).siblings('input');
     $(this).parent().remove();
     $('#tot p u').text(sum());
+    localStorage.setItem('tot',JSON.stringify(sum()))
     console.log($('.list')[0].children.length);
     if( $('.list')[0].children.length===0){
            $('.al').prop('checked','false')

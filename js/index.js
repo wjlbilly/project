@@ -85,7 +85,33 @@ $('.table-list ul li').on("click",function(){
    var index = $(this).index()
    $('.row-right #select').eq(index).css("display","block").siblings(" .row-right #select").css("display","none")
 })
+
+// 购物车数量
+     var num = JSON.parse(localStorage.getItem('tot'))
+       $('.topbar-cart a span').text(`(${num})`)
  
+
+   // 点击注册弹出mask agreement-box
+         $('.topbar-info .register').click(function(){
+            $('#mask').css("display","block");
+            $(".agreement-box").css("display","block");
+         })
+     //点击x隐藏  mask agreement-box
+         $('.log-header a').click(function(){
+          $('#mask').css("display","none");
+          $(".agreement-box").css("display","none");
+         })
+  //点击不同意隐藏  mask agreement-box
+         $('.log_footer .btn-gray').click(function(){
+          $('#mask').css("display","none");
+          $(".agreement-box").css("display","none");
+         })
+  // 点击同意跳转到注册页面
+         $('.log_footer .btn-primary').click(function(){
+           window.location.href ='../register.html';
+         })
+
+         
   // 运动
 // $('.left').click(function(){
 //     var page =1;
