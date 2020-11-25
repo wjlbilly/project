@@ -8,7 +8,7 @@
 
     <link rel="stylesheet"   type="text/css" href="../css/iconfont.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
-    <link rel="stylesheet" type="text/css" href="../css/login.css">>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
 </head>
 
 <body>
@@ -44,20 +44,21 @@
         <span class="line"></span>
         <a href="#" id="saoma">扫码登录</a>
     </div> 
-    <div class="list">
+    <div class="list select1">
          <!-- <p></p> -->
-         <form action="login-js php/login.php" method="post">
-        <input  id="uname" type="text" name="uname" placeholder="邮箱/手机号码/小米ID">
-        <input   id="upwd"  type="password" name="upwd"placeholder="密码">
-        <p><input id="token"  type="checkbox">下次自动登录 </p>
+         <!-- <form action="login-js php/login.php" method="post"> -->
+        <input  id="uname" class="call" type="text" name="uname" placeholder="邮箱/手机号码/小米ID">
+        <input   id="upwd"  class="upwd" type="password" name="upwd" placeholder="密码">
+        <span class="yzm"></span>
+        <!-- <p><input id="token"  type="checkbox">下次自动登录 </p> -->
          <input id="btn"  class="btn" type="submit" value="登录">
-        </form>
+        <!-- </form> -->
     </div> 
-    <div class="img">
+    <div class="img select2">
         <img src="../img/download.png" alt="">
     </div>
     <div class="head">
-        <a href="#" id="register">立即注册</a>
+        <a href="../register.html" id="register">立即注册</a>
         <span class="line"></span>
         <a href="#" id="mima">忘记密码？</a>
     </div> 
@@ -68,7 +69,9 @@
         <a class="icon_type btn_weixin sns-login-link" data-type="weixin" href="/pass/sns/login/auth?appid=wxxmzh&amp;scope=snsapi_login&amp;callback=http%3A%2F%2Forder.mi.com%2Flogin%2Fcallback%3Ffollowup%3Dhttps%253A%252F%252Fwww.mi.com%252F%26sign%3DNzY3MDk1YzczNmUwMGM4ODAxOWE0NjRiNTU5ZGQyMzFhYjFmOGU0Nw%2C%2C&amp;sid=mi_eshop" title="微信登录" target="_blank"><i class="btn_sns_icontype icon_default_weixin"></i></a>
     </div>
 </div>    
-
+<script src="../js/cookie.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/login.js"></script>
 </body>
 </html>
 

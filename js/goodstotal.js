@@ -52,7 +52,7 @@ $(function(){
 this.$list.on('click','li input',function(){
     var total=0;
     var speed=0;
-    $('.list input').each(function(index,item){;
+    $('.list input').each(function(index,item){
 
         if($(item).prop('checked')){
             speed+= Number($(item).siblings('div').find('a').text())

@@ -15,6 +15,11 @@ $(function(){
           </div>`
           }) 
           $('.content').html(goodsData);
+          $('.content').on('click','.goods img',function(){
+             var code = $(this).siblings('span').attr('code')
+            location.href =`./detail.html?code=${code}`
+          })
+
         },
         error:function(data){
           console.log(data);

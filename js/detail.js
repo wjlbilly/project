@@ -34,6 +34,10 @@ $('.nav-list li').mouseleave(function(){
       
   });
 
+  // 购物车
+  var num = JSON.parse(localStorage.getItem('tot'))
+     $('.topbar-cart a span').text(`(${num})`)
+
 //吸顶效果
 var nav = document.getElementById("list")
 // console.log(nav);

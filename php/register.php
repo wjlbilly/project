@@ -19,6 +19,8 @@ if(!$upwd){
     echo json_encode( $responseDate);
       exit;
 }
+
+//连接数据库
  $conn = mysqli_connect("localhost","root","",'project-xm');
 
 if(!$conn){
@@ -27,11 +29,14 @@ if(!$conn){
     echo json_encode( $responseDate);
       exit;
 }
+//设置字符编码
 mysqli_set_charset($conn,'utf8'); 
+//查询数据
 // 验证用户名是否存在
 $sql1 = "select * from user where phone='$phone'";
 $result1 = mysqli_query($conn,$sql1);
 
+// 获取数据 判断手机号是否存在
 $row = mysqli_fetch_assoc($result1);
 if($row){
     $responseDate["code"]=4;

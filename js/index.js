@@ -9,12 +9,14 @@ $('.nav-list li').mouseenter(function(){
     dataType:"json",
     success:function(data){
       var showData='';
-      console.log(data);
       $.each(data,function(index,ele){
           showData+=`<li class="line"><a href="#"><img src="${ele.imgurl}" alt=""><span>${ele.title}</span><p>${ele.price}</p></a></li>`
-      }) 
+      }) ;
       $('.show ul').html(showData);
       $('.show ul').prepend('<li><a href="#"><img src="../img/show2.png" alt=""><span>Remdi K30 至尊纪念版</span><p>5299元起</p></a></li>')
+       $('.show ul').on('click','li img',function(){
+        location.href='../goodsList.html';
+       })
     },
     error:function(data){
       console.log(data);
@@ -61,7 +63,7 @@ $('.nav-list li').mouseleave(function(){
     dataType:"json",
     success:function(data){
       var showData='';
-      console.log(data);
+      // console.log(data);
       $.each(data,function(index,ele){
           showData+=` <li>
                  <div > 
@@ -73,6 +75,9 @@ $('.nav-list li').mouseleave(function(){
            </li>`
       }) 
       $('.box-right ul').html(showData);
+      $('.box-right ul').on('click','li  a img',function(){
+        location.href='../goodsList.html';
+       })
     },
     error:function(data){
       console.log(data);
@@ -113,31 +118,99 @@ $('.table-list ul li').on("click",function(){
 
          
   // 运动
-// $('.left').click(function(){
-//     var page =1;
-//     var i=4;
-//     var ant = $('#oul');
-//     var len= $('#oul').find('li').length;//18 长度
-//    var wid = ant.offsetLeft();
-//       console.log(wid);
-//     ant.animate({'left':'248*4'},1000)
+$('.right').click(function(){
+    var oul = $('.animate #oul');
+    var left =oul.offset().left
+    var oulLeft = left-310;
+     oul.css('left',oulLeft);
+     if(left <= -oul.width()+2000){
+      oul.css('left','0');
+     }
+            
+});
+setInterval(() => {
+  var oul = $('.animate #oul');
+  var left =oul.offset().left
+  var oulLeft = left-310;
+  oul.animate({left:oulLeft },600,'swing',function(){
+    if(left <= -oul.width()+2000){
+      oul.css('left','0');
+     }
+})    
+}, 5000);
 
-//   if( page=page_count){
-//     ant.animate({'left':'248'},1000)
+$('.left').click(function(){
+  var oul = $('.animate #oul');
+  var oulLeft = oul.offset().left+310;
+   oul.css('left',oulLeft);
+   if(left>=0){
+    oul.css('left','0');
+   }
+ })
 
-//   }else{
-//     ant.animate({'left':'248*4'},1000)
-//     page--
-//   }
+ //时间
+ var  d= $('.time #d');
+ var f =$('.time #f');
+ var m =$('.time #m');
+ function countTime(time){
+   setTimeout(function(){
+      var nowTime = new Date().getTime();
+      var endTime = new Date(time).getTime();
+      var res = parseInt(endTime - nowTime);
+       //补零
+        function db(item){
+            return  item <10 ? "0"+item : item;
+        }
+        var  houre=res/1000/60/60;//得到小时
+        var dd = db(parseInt(houre/24));
+        var hh =db( parseInt((houre/24 - dd) * 24));
+        var ff = db(parseInt(((houre/24 - dd) * 24 - hh) * 60));
+        var mm=db( parseInt((((houre/24 - dd) * 24 - hh) * 60 - ff) * 60));
+           d.text(hh);
+           f.text(ff);
+          m.text(mm);
+         if(res<0){
+          d.text('00');
+          f.text('00');
+          m.text('00');
+            }
 
+   },2000)
+ }
+ countTime("2022-1-15 22:00:00");
+//  var d=document.getElementById("d");
+// var f=document.getElementById("f");
+// var m=document.getElementById("m");
+// function countTime(time){
 
-  
-// });
+//     setInterval(function(){
+//         //毫秒数
+//         var nowTime = new Date().getTime();
+//         var endTime = new Date(time).getTime();
+//         var res = parseInt(endTime - nowTime);
+//         //补零
+//         function db(item){
+//             return  item <10 ? "0"+item : item;
+//         }
+//         var  houre=res/1000/60/60;//得到小时
+//         var dd = db(parseInt(houre/24));
+//         var hh =db( parseInt((houre/24 - dd) * 24));
+//         var ff = db(parseInt(((houre/24 - dd) * 24 - hh) * 60));
+//         var mm=db( parseInt((((houre/24 - dd) * 24 - hh) * 60 - ff) * 60));
+//           d.innerHTML =  hh;
+//           f.innerHTML = ff ;
+//           m.innerHTML = mm;
 
-// $('.right').click(function(){
-//     $('.animate').animate({'right':'248*2'},1000)
+//           if(res<0){
+//             d.innerHTML =00;
+//             f.innerHTML =00 ;
+//             m.innerHTML =00;
+//           }
  
-//  })
+//     },200)
+      
+// }
+// countTime("2022-1-15 22:00:00");
 
 
-  
+
