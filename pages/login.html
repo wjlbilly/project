@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <title>登录页</title>
+
+    <link rel="stylesheet"   type="text/css" href="../css/iconfont.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">>
+</head>
+
+<body>
+    <div class="h_panel">
+        <div class="h_logo">
+            <a href="//www.mi.com/index.html" target="_parent" >小米网</a>
+        </div>
+    </div>
+    <div class="login_banner_panel" id="J_panel" style="background-image: url(&quot;https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/aece569d6689b4c461bb53efd9eea9c7.jpg&quot;);">
+        
+    </div>
+    <div class="footer">
+        <div class=" clear">
+        <ul class="list">
+          <li><a href="#">简体</a><span>|</span></li>
+          <li><a >繁体</a><span>|</span></li>
+          <li><a href="#">English</a><span>|</span></li>
+         <li><a href="#" target="_blank"><em></em>常见问题</a></li>
+        </ul>
+        </div>
+        <div class="bt">
+            <ol>
+                <li>小米公司版权所有-京ICP备10046444-</li>
+                <li><a href="#"><img src="https://account.xiaomi.com/static/res/9204d06/account-static/respassport/acc-2014/img/ghs.png" alt=""></a></li>
+                <li>京公网安备11010802020134号-京ICP证110507号</li>
+            </ol>
+    </div>
+</div>
+</div>
+<div class="box">
+    <div class="header">
+        <a href="#" id="zhanghao">账号登录</a>
+        <span class="line"></span>
+        <a href="#" id="saoma">扫码登录</a>
+    </div> 
+    <div class="list">
+         <!-- <p></p> -->
+         <form action="login-js php/login.php" method="post">
+        <input  id="uname" type="text" name="uname" placeholder="邮箱/手机号码/小米ID">
+        <input   id="upwd"  type="password" name="upwd"placeholder="密码">
+        <p><input id="token"  type="checkbox">下次自动登录 </p>
+         <input id="btn"  class="btn" type="submit" value="登录">
+        </form>
+    </div> 
+    <div class="img">
+        <img src="../img/download.png" alt="">
+    </div>
+    <div class="head">
+        <a href="#" id="register">立即注册</a>
+        <span class="line"></span>
+        <a href="#" id="mima">忘记密码？</a>
+    </div> 
+    <div id="sns-login-links" class="oth_type_links">
+        <a class="icon_type btn_qq sns-login-link" data-type="qq" href="/pass/sns/login/auth?appid=100284651&amp;&amp;callback=http%3A%2F%2Forder.mi.com%2Flogin%2Fcallback%3Ffollowup%3Dhttps%253A%252F%252Fwww.mi.com%252F%26sign%3DNzY3MDk1YzczNmUwMGM4ODAxOWE0NjRiNTU5ZGQyMzFhYjFmOGU0Nw%2C%2C&amp;sid=mi_eshop" title="QQ登录" target="_blank"><i class="btn_sns_icontype icon_default_qq"></i></a>
+        <a class="icon_type btn_weibo sns-login-link" data-type="weibo" href="/pass/sns/login/auth?appid=2996826273&amp;&amp;callback=http%3A%2F%2Forder.mi.com%2Flogin%2Fcallback%3Ffollowup%3Dhttps%253A%252F%252Fwww.mi.com%252F%26sign%3DNzY3MDk1YzczNmUwMGM4ODAxOWE0NjRiNTU5ZGQyMzFhYjFmOGU0Nw%2C%2C&amp;sid=mi_eshop" title="微博登录" target="_blank"><i class="btn_sns_icontype icon_default_weibo"></i></a>
+        <a class="icon_type btn_alipay sns-login-link" data-type="alipay" href="/pass/sns/login/auth?appid=2088011127562160&amp;&amp;callback=http%3A%2F%2Forder.mi.com%2Flogin%2Fcallback%3Ffollowup%3Dhttps%253A%252F%252Fwww.mi.com%252F%26sign%3DNzY3MDk1YzczNmUwMGM4ODAxOWE0NjRiNTU5ZGQyMzFhYjFmOGU0Nw%2C%2C&amp;sid=mi_eshop" title="支付宝登录" target="_blank"><i class="btn_sns_icontype icon_default_alipay"></i></a>
+        <a class="icon_type btn_weixin sns-login-link" data-type="weixin" href="/pass/sns/login/auth?appid=wxxmzh&amp;scope=snsapi_login&amp;callback=http%3A%2F%2Forder.mi.com%2Flogin%2Fcallback%3Ffollowup%3Dhttps%253A%252F%252Fwww.mi.com%252F%26sign%3DNzY3MDk1YzczNmUwMGM4ODAxOWE0NjRiNTU5ZGQyMzFhYjFmOGU0Nw%2C%2C&amp;sid=mi_eshop" title="微信登录" target="_blank"><i class="btn_sns_icontype icon_default_weixin"></i></a>
+    </div>
+</div>    
+
+</body>
+</html>
+

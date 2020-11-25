@@ -13,7 +13,25 @@ async function img(){
   src('./img/*.*')
   .pipe(dest('./dist/img'))
 }
+//处理font
+async function  font(){
+  src('./font/*.*')
+  .pipe(dest('./dist/font'))
+  
+}
 
+// 处理json
+
+async function json(){
+  src('./data/*.json')
+  .pipe(dest('./dist/data'))
+
+}
+ async function php() {
+  src('./php/*.php')
+  .pipe(dest('./dist/php'))
+  
+ }
 // 处理JS
 async function script(){
   src('./js/*.js')
@@ -58,4 +76,8 @@ task('build', async ()=>{
   await script()
   await sass()
   await html()
+  await font()
+  await json()
+  await php()
+  
 })
