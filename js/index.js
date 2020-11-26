@@ -1,4 +1,6 @@
 
+
+
 //show json数据
 $('.nav-list li').mouseenter(function(){
     $('.show').slideDown('slow');
@@ -56,6 +58,10 @@ $('.nav-list li').mouseleave(function(){
       
   });
 
+  
+
+
+
   //box-right json 数据渲染
   $.ajax({
     url:'../data/box-right.json',
@@ -92,8 +98,25 @@ $('.table-list ul li').on("click",function(){
 })
 
 // 购物车数量
-     var num = JSON.parse(localStorage.getItem('tot'))
-       $('.topbar-cart a span').text(`(${num})`)
+$('.topbar-cart a').click(function(){
+  if(!!sessionStorage.getItem('ID')){
+    var num = JSON.parse(localStorage.getItem('tot'));
+      $('.topbar-cart a span').text(`(${num})`); 
+   location.href = "../goodsCart.html";
+ 
+  }else{
+    $('.topbar-cart a span').text('0')
+    alert("请先登录"); 
+    location.href = "../login.html";
+}
+   
+})
+if(!!sessionStorage.getItem('ID')){
+  var num = JSON.parse(localStorage.getItem('tot'));
+  $('.topbar-cart a span').text(`(${num})`);
+
+}
+
  
 
    // 点击注册弹出mask agreement-box
@@ -148,69 +171,56 @@ $('.left').click(function(){
    }
  })
 
- //时间
- var  d= $('.time #d');
- var f =$('.time #f');
- var m =$('.time #m');
- function countTime(time){
-   setTimeout(function(){
-      var nowTime = new Date().getTime();
-      var endTime = new Date(time).getTime();
-      var res = parseInt(endTime - nowTime);
-       //补零
-        function db(item){
-            return  item <10 ? "0"+item : item;
-        }
-        var  houre=res/1000/60/60;//得到小时
-        var dd = db(parseInt(houre/24));
-        var hh =db( parseInt((houre/24 - dd) * 24));
-        var ff = db(parseInt(((houre/24 - dd) * 24 - hh) * 60));
-        var mm=db( parseInt((((houre/24 - dd) * 24 - hh) * 60 - ff) * 60));
-           d.text(hh);
-           f.text(ff);
-          m.text(mm);
-         if(res<0){
-          d.text('00');
-          f.text('00');
-          m.text('00');
-            }
+//倒计时
+var  d= $('.time #d');
+var f =$('.time #f');
+var m =$('.time #m');
+function countTime(time){
+  setInterval(function(){
+     var nowTime = new Date().getTime();
+     var endTime = new Date(time).getTime();
+     var res = parseInt(endTime - nowTime);
+      //补零
+       function db(item){
+           return  item <10 ? "0"+item : item;
+       }
+       var  houre=res/1000/60/60;//得到小时
+       var dd = db(parseInt(houre/24));
+       var hh =db( parseInt((houre/24 - dd) * 24));
+       var ff = db(parseInt(((houre/24 - dd) * 24 - hh) * 60));
+       var mm=db( parseInt((((houre/24 - dd) * 24 - hh) * 60 - ff) * 60));
+          d.text(hh);
+          f.text(ff);
+           m.text(mm);
+        if(res<0){
+         d.text('00');
+         f.text('00');
+         m.text('00');
+           }
 
-   },2000)
- }
- countTime("2022-1-15 22:00:00");
-//  var d=document.getElementById("d");
-// var f=document.getElementById("f");
-// var m=document.getElementById("m");
-// function countTime(time){
+  },1000)
+}
+countTime("2020-11-30 22:00:00");
 
-//     setInterval(function(){
-//         //毫秒数
-//         var nowTime = new Date().getTime();
-//         var endTime = new Date(time).getTime();
-//         var res = parseInt(endTime - nowTime);
-//         //补零
-//         function db(item){
-//             return  item <10 ? "0"+item : item;
-//         }
-//         var  houre=res/1000/60/60;//得到小时
-//         var dd = db(parseInt(houre/24));
-//         var hh =db( parseInt((houre/24 - dd) * 24));
-//         var ff = db(parseInt(((houre/24 - dd) * 24 - hh) * 60));
-//         var mm=db( parseInt((((houre/24 - dd) * 24 - hh) * 60 - ff) * 60));
-//           d.innerHTML =  hh;
-//           f.innerHTML = ff ;
-//           m.innerHTML = mm;
+// $('#oul').css("width", $('#oul li').length*234);
+// $('.left').click(function(){
 
-//           if(res<0){
-//             d.innerHTML =00;
-//             f.innerHTML =00 ;
-//             m.innerHTML =00;
-//           }
- 
-//     },200)
-      
-// }
-// countTime("2022-1-15 22:00:00");
-
-
-
+//     var left_animate = $('#oul li').css('left');
+//     if (left_animate != '0px') {
+//         $('#oul li').animate({left:'+=234px'}, 100);
+//     }
+//     });
+    
+//     // 点击向右滑动（先获取列表的长度，然后减去5,5代表一下显示5个li，得到的值乘以234，比较大小，如果不相等，left向右移动239px）
+//     $('.right').click(function(){
+//     var right_animate = $('#oul li').css('left');
+//     var right_num =$('#oul li').length;
+//     console.log(right_num);
+    
+//     right_num = Number(-(right_num-5));
+//     right_num = Number(right_num*234)+'px';
+    
+//     if (right_animate != right_num) {
+//         $('#oul li').animate({left:'-=234px'}, 100);
+//     }
+//     });

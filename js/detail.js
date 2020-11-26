@@ -8,7 +8,6 @@ $('.nav-list li').mouseenter(function(){
     dataType:"json",
     success:function(data){
       var showData='';
-      console.log(data);
       $.each(data,function(index,ele){
           showData+=`<li class="line"><a href="#"><img src="${ele.imgurl}" alt=""><span>${ele.title}</span><p>${ele.price}</p></a></li>`
       }) 
@@ -125,13 +124,44 @@ ol.onmousemove = function(eve){
 
        mask.style.left = l +"px";
        mask.style.top = t+"px";
-  
       //  bigImg.style.left=-(big.clientWidth/mask.offsetWidth)*l+"px";
       //  bigImg.style.top=-(big.clientHeight/mask.offsetHeight)*t+"px";   
 
-      
       bigImg.style.left=-3*l+"px";
       bigImg.style.top=-3*t+"px"; 
    }
       
 }
+
+
+// 获取code值
+
+$('.sale-btn .btn').click(function(){
+  var code = location.search.split('?')[1].split('=')[1];
+ 
+  // 判断有没有数据
+     if(localStorage.getItem('goods')){
+         //又数据把数据取出来 转为对象
+          var goodsArr = JSON.parse(localStorage.getItem('goods'));
+     }else{
+         var goodsArr =[];
+     }
+     var hasGoods=false;
+     if(goodsArr.length>0){
+         // 遍历数组
+         $.each(goodsArr,function(index,ele){
+           if(ele.code===code){
+               ele.num++
+               hasGoods = true
+               return false
+           }
+         })
+     }
+      //如果购物车中没有该商品 添加在里面
+      if(!hasGoods){
+        goodsArr.push({code:code,num:1}) 
+      }
+      //更新本地存储的数据
+      localStorage.setItem("goods",JSON.stringify( goodsArr))
+      alert('添加购物车成功')
+})

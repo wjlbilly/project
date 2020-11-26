@@ -29,7 +29,7 @@ $(function(){
             if(!str.code){
                 $('.yzm').text(str.massage);
                 $('.yzm').css('color','green');
-                localStorage.setItem('ID',pVal);
+      sessionStorage.setItem('ID',pVal);
                 location.href ='./index.html';
             }else{
                 $('.yzm').text(str.massage);

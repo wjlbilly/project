@@ -1,4 +1,5 @@
 $(function(){
+ 
      if(localStorage.getItem('goods')){
          var goodsArr = JSON.parse(localStorage.getItem("goods"));
          $.ajax({
@@ -109,7 +110,7 @@ $(function(){
                 $('#tot p u').text(0);
                 $('#tot i u').text(0); 
                 $('#tot h3 u').text(0);
-                $('.al').prop('ckecked',false);
+                $('.al').prop('checked',false);
                 var nodata = '<li class="no">购物车暂无数据！</li>'
                 $('.list').html(nodata)
                 }
