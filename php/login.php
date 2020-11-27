@@ -6,6 +6,7 @@ $phone = $_POST["phone"];
 $upwd = $_POST["upwd"];
 //做个简单得验证
 //用户名不能为空
+
 if(!$phone){
     $responseDate["code"]=1;
     $responseDate["massage"]="手机号不能为空";

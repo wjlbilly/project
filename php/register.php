@@ -12,6 +12,7 @@ if(!$phone){
     echo json_encode( $responseDate);
     exit;
 }
+
 //密码不能为空
 if(!$upwd){
     $responseDate["code"]=2;

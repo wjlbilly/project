@@ -47,9 +47,9 @@ var nav = document.getElementById("list")
 		var stop = document.documentElement.scrollTop || document.body.scrollTop;
 		
 		if(stop >= 140){
-			//导航固定定位
+      //导航固定定位
 			nav.style.position = "fixed";
-			nav.style.zIndex = 999;
+      nav.style.zIndex = 999;
 			nav.style.top = 0;
 		}else{
 			nav.style.position = "static";
